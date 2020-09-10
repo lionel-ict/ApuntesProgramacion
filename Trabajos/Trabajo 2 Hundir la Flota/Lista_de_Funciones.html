@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>PRG_Trabajo2_HundirLaFlota_Funciones.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #000000; background-color: #ffffff; font-family: monospace}
+pre {color: #000000; background-color: #ffffff; font-family: monospace}
+table {color: #000000; background-color: #e9e8e2; font-family: monospace}
+.ST1 {font-family: monospace; font-weight: bold; font-style: italic}
+.comment {color: #969696}
+.ST0 {font-family: monospace; font-weight: bold}
+.literal {color: #0000e6}
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="literal">package</span> prg_trabajo2_hundirlaflota;
+
+<span class="literal">import</span> java.util.Arrays;
+<span class="literal">import</span> java.util.Scanner;
+
+<span class="literal">public</span> <span class="literal">class</span> <span class="ST0">PRG_Trabajo2_HundirLaFlota</span> {
+
+    <span class="comment">//=======================================</span>
+    <span class="comment">// FUNCIÓN MAIN &amp; MENÚ PRINCIPAL</span>
+    <span class="comment">//=======================================</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST1">main</span>(String[] args) {}
+
+    <span class="comment">// Muestra el menú y devuelve la opción elegida por el usuario (1, 2, 3 o 4)</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">int</span> <span class="ST1">menu_modo_juego</span>() {}
+    
+    <span class="comment">//=======================================</span>
+    <span class="comment">// FUNCIÓNES DE JUGAR PARTIDA</span>
+    <span class="comment">//=======================================</span>
+    
+    <span class="comment">// Juega una nueva partida en un tablero de tamaño filas x columnas,</span>
+    <span class="comment">// con los barcos indicados y el nº máximo de max_disparos</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST1">juega_partida</span>(<span class="literal">int</span> filas, <span class="literal">int</span> columnas, <span class="literal">int</span> lanchas, <span class="literal">int</span> buques, <span class="literal">int</span> acorazados, <span class="literal">int</span> portaaviones, <span class="literal">int</span> max_disparos) {}
+
+    <span class="comment">// Pide los param de una partida personalizada y los devuelve en un vector</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">int</span>[] <span class="ST1">pide_parametros_partida_personalizada</span>() {}
+    
+    <span class="comment">//=======================================</span>
+    <span class="comment">// FUNCIONES DE TABLERO</span>
+    <span class="comment">//=======================================</span>
+    
+    <span class="comment">// Crea y devuelve un tablero vacío (sin barcos) de tamaño filas x columnas</span>
+    <span class="comment">// Contendrá &#39;-&#39; en todas sus posiciones</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">char</span>[][] <span class="ST1">crear_tablero</span>(<span class="literal">int</span> filas, <span class="literal">int</span> columnas) {}
+
+    <span class="comment">// Muestra por pantalla el tablero completo (lo visible y lo oculto)</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST1">muestra_tablero_completo</span>(<span class="literal">char</span>[][] tablero) {}
+
+    <span class="comment">// Muestra por pantalla el tablero visible al usuario</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST1">muestra_tablero_visible</span>(<span class="literal">char</span>[][] tablero) {}
+    
+    <span class="comment">//=======================================</span>
+    <span class="comment">// FUNCIONES DE BARCOS</span>
+    <span class="comment">//=======================================</span>
+    
+    <span class="comment">// Comprueba si queda algún barco en el tablero</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">boolean</span> <span class="ST1">quedan_barcos</span>(<span class="literal">char</span>[][] tablero) {}
+
+    <span class="comment">// Inserta todos los barcos indicados en posiciones aleatorias del tablero</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST1">insertar_barcos</span>(<span class="literal">char</span>[][] tablero, <span class="literal">int</span> lanchas, <span class="literal">int</span> buques, <span class="literal">int</span> acorazados, <span class="literal">int</span> portaaviones) {}
+
+    <span class="comment">// Inserta una lancha en una posición aleatoria del tablero</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST1">inserta_lancha</span>(<span class="literal">char</span>[][] tablero) {}
+
+    <span class="comment">// Inserta un buque en una posición aleatoria del tablero (si cabe)</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST1">inserta_buque</span>(<span class="literal">char</span>[][] tablero) {}
+
+    <span class="comment">// Inserta un acorazado en una posición aleatoria del tablero (si cabe)</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST1">inserta_acorazado</span>(<span class="literal">char</span>[][] tablero) {}
+
+    <span class="comment">// Inserta un portaaviones en una posición aleatoria del tablero (si cabe)</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST1">inserta_portaaviones</span>(<span class="literal">char</span>[][] tablero) {}
+
+    <span class="comment">// Comprueba si es posible insertar una lancha en la coordenada (f,c) del tablero</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">boolean</span> <span class="ST1">comprueba_inserta_lancha</span>(<span class="literal">char</span>[][] tablero, <span class="literal">int</span> f, <span class="literal">int</span> c) {}
+
+    <span class="comment">// Comprueba si es posible insertar un buque en la coordenada (f,c) del tablero</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">boolean</span> <span class="ST1">comprueba_inserta_buque</span>(<span class="literal">char</span>[][] tablero, <span class="literal">int</span> f, <span class="literal">int</span> c) {}
+
+    <span class="comment">// Comprueba si es posible insertar un acorazado en la coordenada (f,c) del tablero</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">boolean</span> <span class="ST1">comprueba_inserta_acorazado</span>(<span class="literal">char</span>[][] tablero, <span class="literal">int</span> f, <span class="literal">int</span> c) {}
+
+    <span class="comment">// Comprueba si es posible insertar un portaaviones en la coordenada (f,c) del tablero</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">boolean</span> <span class="ST1">comprueba_inserta_portaaviones</span>(<span class="literal">char</span>[][] tablero, <span class="literal">int</span> f, <span class="literal">int</span> c) {}
+    
+    <span class="comment">//=======================================</span>
+    <span class="comment">// FUNCIONES DE DISPARO</span>
+    <span class="comment">//=======================================</span>
+    
+    <span class="comment">// Pide coordenadas de disparo (repite hasta que sean válidas)</span>
+    <span class="comment">// y las devuelve en un vector de tamaño 2.</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">int</span>[] <span class="ST1">pide_coordenadas_disparo</span>(<span class="literal">char</span>[][] tablero) {}
+
+    <span class="comment">// Realiza un disparo en las coordenadas indicadas</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST1">realiza_disparo</span>(<span class="literal">char</span>[][] tablero, <span class="literal">int</span> f, <span class="literal">int</span> c) {}
+
+    <span class="comment">// Transforma la coordenada de la fila en int (A es 0, B es 1, C es 2, etc.)</span>
+    <span class="comment">// Devuelve nº negativo si la cadena está mal formateada</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">int</span> <span class="ST1">fila_string_to_int</span>(String s) {}
+    
+    <span class="comment">//=======================================</span>
+    <span class="comment">// FUNCIONES ÚTILES ADICIONALES</span>
+    <span class="comment">//=======================================</span>
+    
+    <span class="comment">// Devuelve un int int_aleatorio entre min y max</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">int</span> <span class="ST1">int_aleatorio</span>(<span class="literal">int</span> min, <span class="literal">int</span> max) {}
+
+    <span class="comment">// Devuelve una coordenada aleatoria del tablero (en un vector tamaño 2)</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">int</span>[] <span class="ST1">coordenada_aleatoria</span>(<span class="literal">char</span>[][] tablero) {}
+
+    <span class="comment">// Comprueba si existe la coordenada en el tablero</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">boolean</span> <span class="ST1">existe_coordenada</span>(<span class="literal">char</span>[][] tablero, <span class="literal">int</span> f, <span class="literal">int</span> c) {}
+
+    <span class="comment">// Muestra el texto al usuario, le pide por teclado un valor int y lo devuelve.</span>
+    <span class="comment">// Se repite indefinidamente hasta que el valor introducido esté entre min y max</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">int</span> <span class="ST1">pide_int_forzoso_entre_min_y_max</span>(String texto, <span class="literal">int</span> min, <span class="literal">int</span> max) {
+
+}
+
+</pre></body>
+</html>
